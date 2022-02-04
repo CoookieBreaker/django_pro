@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block anycon %}
+<div class="container mt-5 mb-5" style="width: 60%;">
+    <h1><b>회원가입</b></h1>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3 mt-4">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="upass">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Age</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" name="uage">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Comment</label>
+        <textarea class="form-control" name="ucom"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">UserImage</label>
+        <input type="file" class="form-control" id="exampleInputPassword1" name="uimg">
+    </div>
+    <div class="mt-4 text-end">
+        <button type="submit" class="btn btn-success">회원가입</button> 
+    </div>
+    </form>
+</div>
+
+
+{% endblock %}
